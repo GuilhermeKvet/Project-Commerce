@@ -1,5 +1,3 @@
-use("commerce");
-
 db.produtos.deleteMany(
   { curtidas: { $lt: 50 } },
   { nome: 1, _id: 0 },
