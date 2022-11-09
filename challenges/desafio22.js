@@ -1,5 +1,3 @@
-use("commerce");
-
 db.produtos.updateMany(
   {},
   { $push: { vendasPorDia: { $each: [0,0,0,0,0,0,0] } } },
@@ -7,12 +5,12 @@ db.produtos.updateMany(
 
 db.produtos.updateOne(
   { nome: "Big Mac" },
-  { $inc: { "vendasPorDia.3": 60 },
+  { $inc: { "vendasPorDia.3": 60 } },
 );
 
 db.produtos.updateOne(
   { tags: { $elemMatch: { $eq: "bovino" } } },
-  { $inc: { "vendasPorDia.6": 120 },
+  { $inc: { "vendasPorDia.6": 120 } },
 );
 
 db.produtos.find(
