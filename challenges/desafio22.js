@@ -1,6 +1,6 @@
 db.produtos.updateMany(
   {},
-  { $push: { vendasPorDia: { $each: [0,0,0,0,0,0,0] } } },
+  { $push: { vendasPorDia: { $each: [0, 0, 0, 0, 0, 0, 0] } } },
 );
 
 db.produtos.updateOne(
